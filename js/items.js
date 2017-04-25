@@ -3,7 +3,7 @@
   var items = [
   {
       "name" : "sofa",
-      "image" : "models/thumbnails/sofa.JPG",
+      "image" : "models/thumbnails/sofa.jpg",
       "model" : "models/js/sofa.js",
       "model_img":"models/sofa/sofa.png",
       "type" : "1",
@@ -18,7 +18,7 @@
     },
     {
       "name" : "sink",
-      "image" : "models/thumbnails/sink.JPG",
+      "image" : "models/thumbnails/sink.jpg",
       "model" : "models/js/sink.js",
       "model_img":"models/sink/sink.png",
       "type" : "1",
@@ -33,7 +33,7 @@
     },
     {
       "name" : "oven",
-      "image" : "models/thumbnails/oven.JPG",
+      "image" : "models/thumbnails/oven.jpg",
       "model" : "models/js/sink.js",
       "model_img":"images/oven.png",
       "type" : "1",
