@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Besta</title>
+      <link href="css/bootstrap.css" rel="stylesheet" />
+	  <link rel="stylesheet" href="style.css">
+	  <meta charset="utf-8">
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
+	  
+   </head>
+   <body>
+	<link href="css/besta.css" rel="stylesheet" />
+	  <script type="text/javascript">
+		function itmsdisp(){
+		document.querySelector(".tab-content").style.display = "block";
+		}
+	  </script>      
+
+      <!--<div class="container-fluid main-wrapper">
+		<div class="container-fluid scroll-wrapper" style="padding: 0;">-->
+         <!-- Navigation -->
+         
+           <nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+       
+        <div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img
+                        src="images/logo.png"
+                        style="max-width:70%"></a>
+						
+        </div><span class="glyphicon glyphicon-shopping-cart sh_Cart visible-xs visible-sm pull-right mobile_cart"> <span class="badge">0</span></span>
+        
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+               <li>
+                <a href="#" >New</a>
+               </li>
+						
+               <li>
+                <a href="#" class="nav_bar">Open</a>							
+               </li>
+						
+               <li>
+                <a href="#" class="nav_bar">Save</a>
+               </li>
+						
+               <li class="dropdown share1">
+                <a data-toggle="dropdown" class="dropdown-toggle" href="#">Share</a>
+                   <ul role="menu" class="dropdown-menu share">
+                        <li class="p_int"><a href="#"><img src="images/Share_icons/pinterest_grey.png" id="pin"/></a></li>
+                        <li class="fb"><a><img src="images/Share_icons/facebook_grey.png" id="fb"/></a></li>
+                        <li class="twit"><a href="#"><img src="images/Share_icons/twitter_grey.png" id="twit"/></a></li>
+                        <li class="g_s"><a href="#"><img src="images/Share_icons/google_grey.png" id="gs"/></a></li>
+                        <li class="email"><a href="#"><img src="images/Share_icons/email_grey.png" id="email"/></a></li>
+                   </ul>
+					
+                </li>
+						
+                <li>
+                            <a href="#" class="nav_bar">Help</a>
+                        </li>
+						
+						<li>
+                            <a href="#" class="nav_bar">Print</a>
+                        </li>
+						<li class="hidden-md hidden-lg">
+                            <a href="#" class="nav_bar">Login</a>
+                        </li>        
+            </ul>
+			
+            <ul class="nav navbar-nav navbar-right hidden-xs hidden-sm">
+                <li><a href="#" id="login">LOGIN</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+		   
+		   
+          <!--<div class="main-row mT55"  style="/*display: table;*/width: 100%;padding: 0;">-->
+            <!-- Left Column -->
+            <div class="col-xs-12 col-sm-9 main" style="padding: 0 10px;">
+               <!-- 3D Viewer -->
+               <div id="viewer" style="display: block;border: 1px solid gainsboro;position: relative;">
+                  <!-- Popover-->
+                  <div class="pull-right">
+                     
+					 <!--   -->
+					 <div class="tabbable hide" id="popoverContent" style="margin-top:0px;">
+						 <div class="row">												 
+							<div class="col-md-6 col-sm-12 col-xs-12">
+								<form action="" class="search-form">
+									<div class="form-group has-feedback">
+										<label for="search" class="sr-only">Search</label>
+										<input type="text" class="form-control" name="search" id="search" placeholder="search article no">
+										<span class="glyphicon glyphicon-search form-control-feedback"></span>
+									</div>
+								</form>
+							</div>
+						 <div class="col-md-6 col-sm-12 col-xs-12">
+						 <div class="pull-right"> 
+							<font face="verdana" color="green">Add Product &gt; </font><font face="verdana"><b> Storage Frames </b></font>
+						 </div>
+						 </div>
+						 </div>
+                    
+				
+					 <ul class="nav nav-tabs nv_tb">
+						<li class="active"><a href="#tab1" data-toggle="tab"><span><img alt="Click to load map" src="images/popoverimages/BESTA_frame.png"/></span>Storage Frames</a></li>
+						<li class="tab"><a href="#tab2" data-toggle="tab"><span><img alt="Click to load map" src="images/popoverimages/mediaSolutions.png"/></span>Tv bench</a></li>
+						<li class="tab"><a href="#tab3" data-toggle="tab"><span><img alt="Click to load map" src="images/popoverimages/propping.png"/></span>Propping</a></li>
+						<li class="tab"><a href="#tab4" data-toggle="tab"><span><img alt="Click to load map" src="images/popoverimages/Tvbench.png"/></span>Place Holder</a></li>
+					</ul>
+				<div class="tab-content" style="padding-top:5px;background: white;">
+					<div class="tab-pane active" id="tab1">
+					<div class="container width_pop">
+					<div class="row">
+					<div class="col-md-5 col-sm-12 col-xs-12 inl">
+					
+						<button class="btn btn-default dropdown-toggle btn-sm" type="button" data-toggle="dropdown">Width
+						<span class="caret"></span></button>
+							<ul class="dropdown-menu">
+								<li><a href="#">1</a></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+							</ul>
+						
+					
+						<button class="btn btn-default dropdown-toggle btn-sm" type="button" data-toggle="dropdown">Height
+						<span class="caret"></span></button>
+							<ul class="dropdown-menu">
+								<li><a href="#">1</a></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+							</ul>
+						
+						
+						<button class="btn btn-default dropdown-toggle btn-sm" type="button" data-toggle="dropdown">Depth
+						<span class="caret"></span></button>
+							<ul class="dropdown-menu">
+								<li><a href="#">1</a></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+							</ul>
+						
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-6">
+					<div><span>Color:</span><br>
+						<span class="round_col"><img alt="Click" src="images/coloricon/all.png"/></span>
+						<span class="round_col"><img alt="Click" src="images/coloricon/oak.png"/></span>
+						<span class="round_col"><img alt="Click" src="images/coloricon/white_stained_oak_effect.png"/></span>
+					</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-xs-6">
+					<a>Clear Filter</a>
+					</div>
+					</div>
+				
+					<br/>
+					
+					
+					<div class="row">
+            
+		<div class="col-md-12 col-md-offset-1">
+		<div class="carousel slide" data-ride="carousel" data-type="multi" data-interval=false id="myCarousel">
+		  <div class="carousel-inner">
+			<div class="item active">
+			  <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/60x20x38 cm.JPG" class="img-responsive" ></a></div>
+			</div>
+			<div class="item">
+			  <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/black brwon.JPG" class="img-responsive"></a></div>
+			</div>
+			<div class="item">
+			  <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/FR18.JPG" ></a></div>
+			</div>
+			<div class="item">
+			  <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/white.JPG" ></a></div>
+			</div>
+			<div class="item">
+			  <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/black brwon.JPG" ></a></div>
+			</div>
+			<div class="item">
+			  <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/black brwon.JPG" ></a></div>
+			</div>
+			<div class="item">
+			  <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/black brwon.JPG" ></a></div>
+			</div>
+			<div class="item">
+			  <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/black brwon.JPG" ></a></div>
+			</div>
+		  </div>
+		  <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+		  <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+		</div>
+		</div>
+        </div>
+		<script>
+			$(document).ready(function(){
+			$('.carousel[data-type="multi"] .item').each(function(){
+			  var next = $(this).next();
+			  if (!next.length) {
+				next = $(this).siblings(':first');
+				
+			  }
+			  next.children(':first-child').clone().appendTo($(this));
+			  
+			  for (var i=0;i<4;i++) {
+				next=next.next();
+				if (!next.length) {
+					next = $(this).siblings(':first');
+				}
+				
+				next.children(':first-child').clone().appendTo($(this));
+			  }
+			});
+
+
+			  
+			});
+		</script>
+
+
+ 
+		</div>
+		</div>
+		<!-- to be implement-->
+        <div class="tab-pane" id="tab2">
+		<div class="container width_pop">
+		<div class="row">
+		<div class="col-md-5 col-sm-12 col-xs-12 inl">
+		
+			<button class="btn btn-default dropdown-toggle btn-sm" type="button" data-toggle="dropdown">Width
+			<span class="caret"></span></button>
+				<ul class="dropdown-menu">
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+				</ul>
+			
+		
+			<button class="btn btn-default dropdown-toggle btn-sm" type="button" data-toggle="dropdown">Height
+			<span class="caret"></span></button>
+				<ul class="dropdown-menu">
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+				</ul>
+			
+			
+			<button class="btn btn-default dropdown-toggle btn-sm" type="button" data-toggle="dropdown">Depth
+			<span class="caret"></span></button>
+				<ul class="dropdown-menu">
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+				</ul>
+			
+		</div>
+		<div class="col-md-4 col-sm-6 col-xs-6">
+		<div><span>Color:</span><br>
+			<span class="round_col"><img alt="Click" src="images/coloricon/all.png"/></span>
+			<span class="round_col"><img alt="Click" src="images/coloricon/oak.png"/></span>
+            <span class="round_col"><img alt="Click" src="images/coloricon/white_stained_oak_effect.png"/></span>
+		</div>
+		</div>
+		<div class="col-md-3 col-sm-6 col-xs-6"><br>
+		<a>Clear Filter</a>
+		</div>
+		</div>
+	
+		<br></br>
+		
+		<div class="row">
+            
+		<div class="col-md-12 col-md-offset-1">
+		<div class="carousel slide" data-ride="carousel" data-type="multi" data-interval=false id="myCarousel">
+		  <div class="carousel-inner">
+			<div class="item active">
+			  <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/60x20x38 cm.JPG" ></a></div>
+			</div>
+			<div class="item">
+			  <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/black brwon.JPG" ></a></div>
+			</div>
+			<div class="item">
+			  <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/60x20x38 cm.JPG" ></a></div>
+			</div>
+			<div class="item">
+			  <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/white.JPG" ></a></div>
+			</div>
+			<div class="item">
+			  <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/black brwon.JPG" ></a></div>
+			</div>
+			<div class="item">
+			  <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/60x20x38 cm.JPG" ></a></div>
+			</div>
+			<div class="item">
+			  <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/black brwon.JPG" ></a></div>
+			</div>
+			<div class="item">
+			  <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/black brwon.JPG" ></a></div>
+			</div>
+		  </div>
+		  <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+		  <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+		</div>
+		</div>
+        </div>
+		
+		
+		
+		</div>
+		</div>
+		<!--tab3-->
+        <div class="tab-pane" id="tab3">
+		
+
+		<div class="container width_pop">
+		<div class="row">
+		<div class="col-md-5 col-sm-12 col-xs-12 inl">
+		
+			<button class="btn btn-default dropdown-toggle btn-sm" type="button" data-toggle="dropdown">Width
+			<span class="caret"></span></button>
+				<ul class="dropdown-menu">
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+				</ul>
+			
+		
+			<button class="btn btn-default dropdown-toggle btn-sm" type="button" data-toggle="dropdown">Height
+			<span class="caret"></span></button>
+				<ul class="dropdown-menu">
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+				</ul>
+			
+			
+			<button class="btn btn-default dropdown-toggle btn-sm" type="button" data-toggle="dropdown">Depth
+			<span class="caret"></span></button>
+				<ul class="dropdown-menu">
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+				</ul>
+			
+		</div>
+		<div class="col-md-4 col-sm-6 col-xs-6">
+		<div><span>Color:</span><br>
+			<span class="round_col"><img alt="Click" src="images/coloricon/all.png"/></span>
+			<span class="round_col"><img alt="Click" src="images/coloricon/oak.png"/></span>
+            <span class="round_col"><img alt="Click" src="images/coloricon/white_stained_oak_effect.png"/></span>
+		</div>
+		</div>
+		<div class="col-md-3 col-sm-6 col-xs-6"><br>
+		<a>Clear Filter</a>
+		</div>
+		</div>
+		
+		<br></br>
+		
+		<div class="row">
+            
+		<div class="col-md-12 col-md-offset-1">
+		<div class="carousel slide" data-ride="carousel" data-type="multi" data-interval=false id="myCarousel">
+		  <div class="carousel-inner">
+			<div class="item active">
+			  <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/60x20x38 cm.JPG" ></a></div>
+			</div>
+			<div class="item">
+			  <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/black brwon.JPG" ></a></div>
+			</div>
+			<div class="item">
+			  <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/60x20x38 cm.JPG" ></a></div>
+			</div>
+			<div class="item">
+			  <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/white.JPG" ></a></div>
+			</div>
+			<div class="item">
+			  <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/black brwon.JPG" ></a></div>
+			</div>
+			<div class="item">
+			  <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/60x20x38 cm.JPG" ></a></div>
+			</div>
+			<div class="item">
+			  <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/black brwon.JPG" ></a></div>
+			</div>
+			<div class="item">
+			  <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/black brwon.JPG" ></a></div>
+			</div>
+		  </div>
+		  <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+		  <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+		</div>
+		</div>
+        </div>
+		
+		
+		
+		</div>
+		</div>
+		<!--tab4-->
+		<div class="tab-pane" id="tab4">
+		<div class="tab-pane" id="tab2">
+		<div class="container width_pop">
+		<div class="row">
+		<div class="col-md-5 col-sm-12 col-xs-12 inl">
+		
+			<button class="btn btn-default dropdown-toggle btn-sm" type="button" data-toggle="dropdown">Width
+			<span class="caret"></span></button>
+				<ul class="dropdown-menu">
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+				</ul>
+			
+		
+			<button class="btn btn-default dropdown-toggle btn-sm" type="button" data-toggle="dropdown">Height
+			<span class="caret"></span></button>
+				<ul class="dropdown-menu">
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+				</ul>
+			
+			
+			<button class="btn btn-default dropdown-toggle btn-sm" type="button" data-toggle="dropdown">Depth
+			<span class="caret"></span></button>
+				<ul class="dropdown-menu">
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+				</ul>
+			
+		</div>
+		<div class="col-md-4 col-sm-6 col-xs-6">
+		<div><span>Color:</span><br>
+			<span class="round_col"><img alt="Click" src="images/coloricon/all.png"/></span>
+			<span class="round_col"><img alt="Click" src="images/coloricon/oak.png"/></span>
+            <span class="round_col"><img alt="Click" src="images/coloricon/white_stained_oak_effect.png"/></span>
+		</div>
+		</div>
+		<div class="col-md-3 col-sm-6 col-xs-6"><br>
+		<a>Clear Filter</a>
+		</div>
+		</div>
+		
+		<br/><br/>
+		
+		<div class="row">
+            
+			<div class="col-md-12 col-md-offset-1">
+			<div class="carousel slide" data-ride="carousel" data-type="multi" data-interval=false id="myCarousel">
+			  <div class="carousel-inner">
+				<div class="item active">
+				  <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/60x20x38 cm.JPG"/></a></div>
+				</div>
+				<div class="item">
+				  <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/black brwon.JPG"/></a></div>
+				</div>
+				<div class="item">
+				  <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/60x20x38 cm.JPG"/></a></div>
+				</div>
+				<div class="item">
+				  <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/white.JPG"/></a></div>
+				</div>
+				<div class="item">
+				  <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/black brwon.JPG"/></a></div>
+				</div>
+				<div class="item">
+				  <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/60x20x38 cm.JPG"/></a></div>
+				</div>
+				<div class="item">
+				  <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/white.JPG"/></a></div>
+				</div>
+				<div class="item">
+				  <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/black brwon.JPG"/></a></div>
+				</div>
+			  </div>
+			  <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+			  <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+			</div>
+			</div>
+					</div>
+		
+		
+		
+		</div>
+		</div>
+		</div>
+    </div>
+</div>
+
+			<script>
+						$("#btnPopover").popover({
+				html: true,
+				trigger: 'click',
+				
+				placement: "left",
+				content: $('#popoverContent').remove().html()
+			});
+
+			</script>
+					 
+					 <!--   -->
+					 
+					 <div>
+						<!--<a class="btn1" id="btnPopover" href="#"><img onmouseover="this.src='images/add_product_hover.png'" src="images/add_product.png"  onmouseout="this.src='images/add_product.png'" /></a>
+						<a class="btn2" id="btnWallover" href="#"><img onmouseover="this.src='images/room_layout_hover.png'" src="images/room_layout.png"  onmouseout="this.src='images/room_layout.png'" /></a>-->
+						<a class="trigger btn btn-default btn-lg pull-right btn1 " href="#" id="btnPopover">
+                            <span><img src="../images/add_product.png" id="add"/></span>
+                        </a>
+                     </div>
+					
+					 
+                     <div id="loading-modal">
+                        <h1>Loading...</h1>
+                     </div>
+                  </div>
+                  <!-- 2D Floorplanner -->
+                  <div id="floorplanner">
+                     <canvas id="floorplanner-canvas"></canvas>                    
+                  </div>
+               </div>
+            </div>
+            <!-- End Right Column -->
+            <!-- Right Column -->
+            <div class="col-xs-3 sidebar height100p">
+              <div class="row" style="height: 30px;background: gainsboro;padding: 0;">
+			 
+                <div class="shopCart"><span class="glyphicon glyphicon-shopping-cart" style="float:left; margin-right:10%"></span><span class="totalBG1">3</span></div>
+                <div class="cartTxt">items in your cart</div>
+                <div class="col-md-2 price cartTxt"><label class="redTxt">$90.00</label></div>
+                <div class="col-md-1 closeX"><span class="glyphicon glyphicon-triangle-top"></span></div>	
+              
+			  </div>
+
+              <ul id="cart-items">
+                <li>
+                  <div class="col-sm-2" style="padding:0;"><img src="images/60x20x38cm.JPG" width="55px"></div>
+                  <div class="col-sm-6">
+                    <div style="font-size:11px;font-weight:600;">BestA frame white</div>
+                    <div style="font-size:10px;color:gray;">60x20x38 cm</div>
+                    <div style="font-size:10px;">Qty: 1</div>
+                  </div>
+                  <div class="col-sm-3"><div  style="font-size:11px;font-weight:600;">$30.00</div></div>
+                </li>
+                <li>
+                  <div class="col-sm-2" style="padding:0;"><img src="images/60x20x38cm.JPG" width="55px"></div>
+                  <div class="col-sm-6">
+                    <div style="font-size:11px;font-weight:600;">BestA frame white</div>
+                    <div style="font-size:10px;color:gray;">60x20x38 cm</div>
+                    <div style="font-size:10px;">Qty: 1</div>
+                  </div>
+                  <div class="col-sm-3"><div  style="font-size:11px;font-weight:600;">$30.00</div></div>
+                </li>
+
+              </ul>             
+
+               <div style="padding:0 10px;">
+			   
+                <button name="color" type="button" class="btn" value="btn-success" style="
+                    background: #0051ba;
+                    color: #fff;
+                    width: 100%;
+                    padding: 10px;
+                    border-radius: 0;
+                ">Continue </button>
+               </div>
+
+
+
+            <!--</div>
+         </div>-->
+
+      </div>
+      <script src="js/three.min.js"></script>
+      <script src="js/compiled.js"></script>
+      <script src="js/jquery.js"></script>
+      <script src="js/bootstrap.js"></script>
+      <script src="js/main.js"></script>
+      
+   </body>
+</html>

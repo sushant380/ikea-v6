@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Example of Bootstrap 3 Two Column Grid Layouts for Tablets and Desktops</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<style type="text/css">
+    /* Some custom styles to beautify this example */
+	body {
+    margin: 0;
+    padding: 0;
+    
+    height: 100%;
+    background: whitesmoke;
+}
+    .content_area{
+       margin-top: 0px;
+	   height: 600px;
+    background-image: url(images/room1.jpg);
+    background-size: 100% 600px;
+    background-repeat: no-repeat;
+    }
+    .bg-alt{
+        background: #abb1b8;
+		height:auto;
+    }
+	.sh_Cart{
+font-size:30px;
+}
+	.navbar-default {
+                background-color: #ffffff;
+                background-image: none;
+                background-repeat: no-repeat;
+            }
+            .navbar-default .navbar-nav > li > a:focus,
+            .navbar-default .navbar-nav > li > a:hover {
+                color: black;
+                /*Sets the text hover color on navbar*/
+            }
+            .navbar-default .navbar-nav > .active > a,
+            .navbar-default .navbar-nav > .active > a:focus,
+            .navbar-default .navbar-nav > .active > a:hover {
+                color: black;
+                /*BACKGROUND color for active*/
+                background-color: #ffffff;
+                background-image: none;
+                background-repeat: no-repeat;
+            }
+
+            .navbar-default {
+                background-color: #ffffff;
+            }
+          
+	
+	.navbar .navbar-nav {
+    display: inline-block;
+	padding-left:100px;
+	padding: 10px;
+    
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+	
+}
+	/*Form Wizard*/
+            .bs-wizard {
+                border-bottom: solid 1px #e0e0e0;
+                padding: 0;
+				margin-top:60px;
+            }
+            .bs-wizard > .bs-wizard-step {
+                padding: 0;
+                position: relative;
+            }
+            .bs-wizard > .bs-wizard-step + .bs-wizard-step {}
+            .bs-wizard > .bs-wizard-step .bs-wizard-stepnum {
+                color: #595959;
+                font-size: 12px;
+                margin-bottom: 2px;
+            }
+            .bs-wizard > .bs-wizard-step .bs-wizard-info {
+                color: #999;
+                font-size: 14px;
+            }
+            .bs-wizard > .bs-wizard-step > .bs-wizard-dot {
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                display: block;
+                background: #5cb85c;
+                top: 30px;
+                left: 50%;
+                margin-top: -15px;
+                margin-left: -15px;
+                border-radius: 50%;
+            }
+            .bs-wizard > .bs-wizard-step > .bs-wizard-dot:after {
+                content: ' ';
+                width: 10px;
+                height: 10px;
+                background: #f2dede;
+                border-radius: 50px;
+                position: absolute;
+                top: 5px;
+                left: 5px;
+            }
+            .bs-wizard > .bs-wizard-step > .progress {
+                position: relative;
+                border-radius: 0;
+                height: 3px;
+                box-shadow: none;
+                margin: 8px 0;
+            }
+            .bs-wizard > .bs-wizard-step > .progress > .progress-bar {
+                width: 0;
+                box-shadow: none;
+                background: #4496ed;
+            }
+            .bs-wizard > .bs-wizard-step.complete > .progress > .progress-bar {
+                width: 100%;
+            }
+            .bs-wizard > .bs-wizard-step.active > .progress > .progress-bar {
+                width: 50%;
+            }
+            .bs-wizard > .bs-wizard-step:first-child.active > .progress > .progress-bar {
+                width: 0;
+            }
+            .bs-wizard > .bs-wizard-step:last-child.active > .progress > .progress-bar {
+                width: 100%;
+            }
+            .bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot {
+                background-color: #f5f5f5;
+            }
+            .bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot:after {
+                opacity: 0;
+            }
+            .bs-wizard > .bs-wizard-step:first-child > .progress {
+                left: 50%;
+                width: 50%;
+            }
+            .bs-wizard > .bs-wizard-step:last-child > .progress {
+                width: 50%;
+            }
+            .bs-wizard > .bs-wizard-step.disabled a.bs-wizard-dot {
+                pointer-events: none;
+            }
+			
+			.popover{
+    max-width: 80%; /* Max Width of the popover (depending on the container!) */
+	 top: 0px !important;
+	position:absolute;
+	background: #ffe255;
+}
+.arrow{
+top: 5.0174%!important;
+}
+.popover.left .arrow:after {
+  border-left-color: #ffe255;
+}
+.width_pop{max-width:100%;}
+
+.nav-tabs{
+  background-color:#eaeae1;
+}
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 0px 7px;
+}
+
+
+.navbar-default .navbar-nav > li > a{
+font-size:13pt;
+font-family:verdana;
+color:#333333;
+font-weight:normal;
+padding-left:20px;}
+.navbar-default .navbar-nav > li > a:hover{font-weight:bold;}
+
+.line_bar{
+    margin-top: 0px;
+}
+
+
+    
+    @media all and (transform-3d), (-webkit-transform-3d) {
+      > .item{
+        // use your favourite prefixer here
+        transition: 500ms ease-in-out all;
+        backface-visibility: visible;
+        transform: none!important;
+      }
+    }
+  }
+
+/*glyphicon size change*/
+.sh_Cart{
+font-size:30px;
+}
+#count{
+    background: #ea5610;
+    display: inline-block;
+    padding: 7px;
+    position: absolute;
+    margin-left: 10px;
+    color: white;
+}
+#count_text{
+position: absolute;
+display: inline-block;
+margin-left:35px;
+padding:7px;
+}
+#count_price{
+position: absolute;
+display: inline-block;
+margin-left:160px;
+padding:7px;
+color:#ea5610;
+font-weight:bold;
+}
+@media only screen and (max-width: 900px) {
+.navbar .navbar-collapse {
+    text-align: left;
+	background:#ced0d4;
+	opacity: 0.9;
+	position: absolute;
+	width: 100%;
+	     
+}
+.share li {
+    display: inline-block;
+    width: 10%;
+    padding-left: 15px;
+}
+   
+.line_bar{
+    visibility:hidden;
+}
+.dd{
+margin-left: 80px;
+margin-top: -30px
+}
+.dd1{
+margin-left: 160px;
+margin-top: -30px
+}
+.dd2{
+
+margin-top: 30px
+}
+.dd3{
+margin-left: 150px;
+margin-top: -20px
+}
+.nav-tabs>li {
+    
+    margin-bottom: -8px;
+	    width: 100%;
+}
+}
+.carousel-control     		 { width:  5%; }
+.carousel-control.left{background-image:none; margin-left:-20px; margin-top:-35px;color:black;}
+.carousel-control.right {background-image:none; margin-right:-25px; margin-top:-35px;color:black;}
+@media (max-width: 767px) {
+	.carousel-inner .active.left { left: -100%; }
+	.carousel-inner .next        { left:  100%; }
+	.carousel-inner .prev		 { left: -100%; }
+	.active > div { display:none; }
+	.active > div:first-child { display:block; }
+	
+
+}
+@media (min-width: 767px) and (max-width: 992px ) {
+	.carousel-inner .active.left { left: -50%; }
+	.carousel-inner .next        { left:  50%; }
+	.carousel-inner .prev		 { left: -50%; }
+	.active > div { display:none; }
+	.active > div:first-child { display:block; }
+	.active > div:first-child + div { display:block; }
+}
+@media (min-width: 992px ) {
+	.carousel-inner .active.left { left: -16.7%; }
+	.carousel-inner .next        { left:  16.7%; }
+	.carousel-inner .prev		 { left: -16.7%; }	
+	.col-md-offset-1 { margin-left: -0.666667%;}
+	
+}
+
+.mobile_cart{
+margin-top:-40px;
+margin-right: 6px;
+}
+.badge {
+    display: inline-block;
+    min-width: 15px;
+    padding: 3px;
+    font-size: 11px;
+    font-weight: 100;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: top;
+    background-color: #d81212;
+    border-radius: 9px;
+	    margin-left: -30px;
+}
+.share li{
+display:inline-block;
+width: 15%;
+padding-left: 15px;
+}
+.dropdown-menu{
+    min-width: 330px;
+}
+.dropdown-menu>li>a{
+    padding: 0px 0px;
+	display: inline-block;
+}
+#pin:hover{content:url('images/shareicons/pinterest.png');}
+#fb:hover{content:url('images/shareicons/fb.png');}
+#twit:hover{content:url('images/shareicons/twit.png');}
+#gs:hover{content:url('images/shareicons/g.png');}
+#email:hover{content:url('images/shareicons/email.png');}
+.container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
+    margin-right: -15px;
+    margin-left: -15px;
+    /* height: 20px; */
+    margin-top: -5px;
+}
+.share1 > a:hover, .share1 > a:focus{
+  background-color: transparent !important;
+  text-decoration: none;
+  
+}
+.share1.open > a {
+    background: transparent !important;
+	outline:0;
+}
+.navbar-nav>li>.dropdown-menu {
+    margin-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background-color: #f5f5f5;
+}
+.navbar-toggle {
+    position: absolute;
+    float: right;
+    padding: 9px 10px;
+    margin-top: 12px;
+    /* margin-right: 35px; */
+    margin-bottom: 8px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    margin-left: 62%;
+}
+.btn1{
+    height: 50px;
+    padding: 3px;
+}
+#undo:hover{content:url('../images/undo_b_hover.png');}
+#redo:hover{content:url('../images/redo_b_hover.png');}
+#center:hover{content:url('../images/center_b_hover.png');}
+#z_in:hover{content:url('../images/zoom_in_b_hover.png');}
+#z_out:hover{content:url('../images/zoom_out_b_hover.png');}
+#full:hover{content:url('../images/fullscreen_b_hover.png');}
+#add:hover{content:url('../images/add_product_hover.png');}
+
+
+.search-form .form-group {
+  float: right !important;
+  transition: all 0.35s, border-radius 0s;
+  width: 32px;
+  height: 32px;
+  background-color: #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+}
+.search-form .form-group input.form-control {
+  padding-right: 20px;
+  border: 0 none;
+  background: transparent;
+  box-shadow: none;
+  display:block;
+}
+.search-form .form-group input.form-control::-webkit-input-placeholder {
+  display: none;
+}
+.search-form .form-group input.form-control:-moz-placeholder {
+  /* Firefox 18- */
+  display: none;
+}
+.search-form .form-group input.form-control::-moz-placeholder {
+  /* Firefox 19+ */
+  display: none;
+}
+.search-form .form-group input.form-control:-ms-input-placeholder {
+  display: none;
+}
+.search-form .form-group:hover,
+.search-form .form-group.hover {
+  width: 100%;
+  border-radius: 4px 25px 25px 4px;
+}
+.search-form .form-group span.form-control-feedback {
+  position: absolute;
+  top: -1px;
+  right: -2px;
+  z-index: 2;
+  display: block;
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  color: #3596e0;
+  left: initial;
+  font-size: 14px;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #23afd8 !important;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #560fe0;
+}
+#login{
+color:#efeee8;font-size:20pt;
+}
+</style>
+
+
+		
+</head>
+<body>
+<nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img
+                        src="images/logo.png"
+                        style="max-width:70%"></a>
+						
+        </div><span class="glyphicon glyphicon-shopping-cart sh_Cart visible-xs visible-sm pull-right mobile_cart"> <span class="badge">0</span></span>
+        <!-- Collection of nav links and other content for toggling -->
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                 <li>
+                            <a href="#" >New</a>
+                        </li>
+						<li class="line_bar">|</li>
+                        <li>
+                            <a href="#" class="nav_bar">Open</a>
+							
+                        </li>
+						<li class="line_bar">|</li>
+                        <li>
+                            <a href="#" class="nav_bar">Save</a>
+                        </li>
+						<li class="line_bar">|</li>
+                        <li class="dropdown share1">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">Share</a>
+                    <ul role="menu" class="dropdown-menu share">
+                        <li class="p_int"><a href="#"><img src="images/shareicons/pinterest_S.png" id="pin"></img></a></li>
+                        <li class="fb"><a><img src="images/shareicons/fb_S.png" id="fb"></img></a></li>
+                        <li class="twit"><a href="#"><img src="images/shareicons/twit_S.png" id="twit"></img></a></li>
+                        <li class="g_s"><a href="#"><img src="images/shareicons/g_S.png" id="gs"></img></a></li>
+                        <li class="email"><a href="#"><img src="images/shareicons/email_S.png" id="email"></img></a></li>
+                    </ul>
+                </li>
+						<li class="line_bar">|</li>
+                        <li>
+                            <a href="#" class="nav_bar">Help</a>
+                        </li>
+						<li class="line_bar">|</li>
+						<li>
+                            <a href="#" class="nav_bar">Print</a>
+                        </li>
+						
+            </ul>
+            <ul class="nav navbar-nav navbar-right hidden-xs hidden-sm">
+                <li><a href="#" id="login">Login</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <!-- Open the output in a new blank tab (Click the arrow next to "Show Output" button) and resize the browser window to understand how the Bootstrap responsive grid system works. -->
+    <div class="container-fluid">
+	
+	<div class="row bs-wizard" style="border-bottom:0;">
+
+                <div class="col-xs-2 bs-wizard-step complete">
+                    <div class="text-center bs-wizard-stepnum">Step 1</div>
+                    <div class="progress">
+                        <div class="progress-bar"></div>
+                    </div>
+                    <a class="bs-wizard-dot" href="#"></a>
+
+                </div>
+
+                <div class="col-xs-2 bs-wizard-step complete">
+                    <!-- complete -->
+                    <div class="text-center bs-wizard-stepnum">Step 2</div>
+                    <div class="progress">
+                        <div class="progress-bar"></div>
+                    </div>
+                    <a class="bs-wizard-dot" href="#"></a>
+
+                </div>
+
+                <div class="col-xs-2 bs-wizard-step complete">
+                    <!-- complete -->
+                    <div class="text-center bs-wizard-stepnum">Step 3</div>
+                    <div class="progress">
+                        <div class="progress-bar"></div>
+                    </div>
+                    <a class="bs-wizard-dot" href="#"></a>
+
+                </div>
+
+                <div class="col-xs-2 bs-wizard-step complete">
+                    <!-- active -->
+                    <div class="text-center bs-wizard-stepnum">Step 4</div>
+                    <div class="progress">
+                        <div class="progress-bar"></div>
+                    </div>
+                    <a class="bs-wizard-dot" href="#"></a>
+
+                </div>
+            </div>
+			
+        <!--Row with two equal columns-->
+		
+		<div class="row">
+		
+		<div class="col-sm-9">
+		
+		<button class="btn btn-default btn-lg btn1">
+                           <img src="../images/undo.png" id="undo"></img>
+                        </button>
+						
+						<button class="btn btn-default btn-lg btn1 hidden-xs hidden-sm">
+                           <span><img src="../images/redo.png" id="redo"></img></span>
+                        </button>
+                        <button class="btn btn-default btn-lg btn1 hidden-xs hidden-sm">
+                            <span><img src="../images/center.png" id="center"></img></span>
+                        </button>
+                        <button class="btn btn-default btn-lg btn1 hidden-xs hidden-sm">
+                            <span><img src="../images/zoom_in.png" id="z_in"></img></span>
+                        </button>
+						<button class="btn btn-default btn-lg btn1 hidden-xs hidden-sm">
+                            <span><img src="../images/zoom_out.png" id="z_out"></img></span>
+                        </button>
+                        <button class="btn btn-default btn-lg btn1 hidden-xs hidden-sm" >
+                            <span><img src="../images/fullscreen.png" id="full"></img></span>
+                        </button>
+						<button class="btn btn-default btn-lg btn1">
+                            <span><img src="../images/3d.png" id="3d"></img></span>
+                        </button>
+						
+						
+		</div>
+		<div class="col-md-3 hidden-xs">
+                <div class="bg-alt">
+			
+				<div class="glyphicon glyphicon-shopping-cart sh_Cart"></div>
+					<div id="count">0</div>
+					<div id="count_text">Items in your cart</div>
+					<div id="count_price">$ 0.0</div>
+				
+					
+				</div>
+				
+            </div>
+		</div>
+		
+        <div class="row">
+            <div class="col-sm-9">
+			
+                <div class="content_area">
+			<!--	<button class="btn btn-default btn-lg btn1 hidden-xs hidden-sm">
+                           <img src="../images/3d.png"></img>
+                        </button>
+						<span><img src="../images/3d.png"></img></span>
+						<button class="btn btn-default btn-lg btn1 hidden-xs hidden-sm">
+                            <span class="glyphicon glyphicon-share-alt"></span>
+                        </button>
+                        <button class="btn btn-default btn-lg btn1 hidden-xs hidden-sm">
+                            <span class="glyphicon glyphicon-screenshot"></span>
+                        </button>
+                        <button class="btn btn-default btn-lg btn1">
+                            <span class="glyphicon glyphicon-zoom-in"></span>
+                        </button>
+                        <button class="btn btn-default btn-lg btn1" >
+                            <span class="glyphicon glyphicon-zoom-out"></span>
+                        </button>
+						<button
+                            class="btn btn-default btn-lg btn1"
+                            onclick="toggleFullScreen(document.body)">
+                            
+                        </button>
+						<span><img src="../images/3d.png"></img></span>-->
+						<a
+                            class="trigger btn btn-default btn-lg pull-right btn1 "
+                            href="#"
+                            id="btnPopover">
+                            <span><img src="../images/add_product.png" id="add"></img></span>
+                        </a>
+						
+						<div class="tabbable hide" id="popoverContent" style="margin-top:0px;">
+						 <div class="row">
+						<!-- <div class="col-md-6">
+						 <input type="text" placeholder="Search" class="form-control"> 
+						 </div>-->
+						 
+						 <div class="col-md-6 col-sm-12 col-xs-12">
+            <form action="" class="search-form">
+                <div class="form-group has-feedback">
+            		<label for="search" class="sr-only">Search</label>
+            		<input type="text" class="form-control" name="search" id="search" placeholder="search article no">
+              		<span class="glyphicon glyphicon-search form-control-feedback"></span>
+            	</div>
+            </form>
+        </div>
+						 <div class="col-md-6 col-sm-12 col-xs-12">
+						<div class="pull-right"> Add Product > Storage Frames</div>
+						 </div>
+						 </div>
+                    
+				
+     <ul class="nav nav-tabs">
+        <li class="active"><a href="#tab1" data-toggle="tab"><span><img alt="Click to load map" src="images/popoverimages/BESTA_frame.png"/></span>Storage Frames</a></li>
+        <li class="tab"><a href="#tab2" data-toggle="tab"><span><img alt="Click to load map" src="images/popoverimages/mediaSolutions.png"/></span>Tv bench</a></li>
+        <li class="tab"><a href="#tab3" data-toggle="tab"><span><img alt="Click to load map" src="images/popoverimages/propping.png"/></span>Propping</a></li>
+		<li class="tab"><a href="#tab4" data-toggle="tab"><span><img alt="Click to load map" src="images/popoverimages/Tvbench.png"/></span>Place Holder</a></li>
+    </ul>
+    <div class="tab-content" style="padding-top:5px;background: white;">
+        <div class="tab-pane active" id="tab1">
+		<div class="container width_pop">
+		<div class="row">
+		<div class="col-md-2">
+			<div class="dropdown">
+			<button class="btn btn-primary dropdown-toggle btn-sm" type="button" data-toggle="dropdown">Width
+			<span class="caret"></span></button>
+				<ul class="dropdown-menu">
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-2 dd">
+		<div class="dropdown">
+			<button class="btn btn-primary dropdown-toggle btn-sm" type="button" data-toggle="dropdown">Height
+			<span class="caret"></span></button>
+				<ul class="dropdown-menu">
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-2 dd1">
+		<div class="dropdown">
+			<button class="btn btn-primary dropdown-toggle btn-sm" type="button" data-toggle="dropdown">Depth
+			<span class="caret"></span></button>
+				<ul class="dropdown-menu">
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-3 dd2">
+		<div><span>Color:</span>
+			<span class="round_col"><img alt="Click" src="images/coloricon/all.png"/></span>
+			<span class="round_col"><img alt="Click" src="images/coloricon/oak.png"/></span>
+            <span class="round_col"><img alt="Click" src="images/coloricon/white_stained_oak_effect.png"/></span>
+		</div>
+		</div>
+		<div class="col-md-3 dd3"><a>Clear Filter</a></div>
+		</div>
+		<br></br>
+		<!--image row
+		<div class="row">
+		<ul class="pagination">
+        <li class="disabled"><a href="#"><img alt="" src="left.png" style="height:50px;width:35px"></a></li>
+        <li><a><img alt="" src="images/thumbnail/60x20x38 cm.jpg" style="height:50px;width:50px"></a></li>
+        <li><a href="#"><img alt="" src="images/thumbnail/black brwon.jpg" style="height:50px;width:50px"></a></li>
+        <li><a href="#"><img alt="" src="images/thumbnail/FR18.jpg" style="height:50px;width:50px"></a></li>
+        <li><a href="#"><img alt="" src="images/thumbnail/white.jpg" style="height:50px;width:50px"></a></li>
+        <li><a href="#"><img alt="" src="images/thumbnail/Grey Stained.jpg" style="height:50px;width:50px"></a></li>
+		<li><a href="#"><img alt="" src="images/thumbnail/60x20x38 cm.jpg" style="height:50px;width:50px"></a></li>
+		<li><a href="#"><img alt="" src="images/thumbnail/black brwon.jpg" style="height:50px;width:50px"></a></li>
+        <li><a href="#"><img alt="" src="right.png" style="height:50px;width:35px"></a></li>
+		</ul>
+		</div>
+		 -->
+		
+		<div class="row">
+            
+<div class="col-md-12 col-md-offset-1">
+<div class="carousel slide" data-ride="carousel" data-type="multi" data-interval=false id="myCarousel">
+  <div class="carousel-inner">
+    <div class="item active">
+      <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/60x20x38 cm.jpg" ></a></div>
+    </div>
+    <div class="item">
+      <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/black brwon.jpg" ></a></div>
+    </div>
+    <div class="item">
+      <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/FR18.jpg" ></a></div>
+    </div>
+    <div class="item">
+      <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/white.jpg" ></a></div>
+    </div>
+    <div class="item">
+      <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/FR18.jpg" ></a></div>
+    </div>
+    <div class="item">
+      <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/FR18.jpg" ></a></div>
+    </div>
+    <div class="item">
+      <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/FR18.jpg" ></a></div>
+    </div>
+    <div class="item">
+      <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/FR18.jpg" ></a></div>
+    </div>
+  </div>
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+</div>
+</div>
+        </div>
+		<script>
+$(document).ready(function(){
+$('.carousel[data-type="multi"] .item').each(function(){
+  var next = $(this).next();
+  if (!next.length) {
+    next = $(this).siblings(':first');
+	
+  }
+  next.children(':first-child').clone().appendTo($(this));
+  
+  for (var i=0;i<4;i++) {
+    next=next.next();
+    if (!next.length) {
+        next = $(this).siblings(':first');
+  	}
+    
+    next.children(':first-child').clone().appendTo($(this));
+  }
+});
+});
+</script>
+
+
+ 
+		</div>
+		</div>
+		<!-- to be implement-->
+        <div class="tab-pane" id="tab2">
+		<div class="container width_pop">
+		<div class="row">
+		<div class="col-md-2">
+			<div class="dropdown">
+			<button class="btn btn-primary dropdown-toggle btn-sm" type="button" data-toggle="dropdown">Width
+			<span class="caret"></span></button>
+				<ul class="dropdown-menu">
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-2 dd">
+		<div class="dropdown">
+			<button class="btn btn-primary dropdown-toggle btn-sm" type="button" data-toggle="dropdown">Height
+			<span class="caret"></span></button>
+				<ul class="dropdown-menu">
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-2 dd1">
+		<div class="dropdown">
+			<button class="btn btn-primary dropdown-toggle btn-sm" type="button" data-toggle="dropdown">Depth
+			<span class="caret"></span></button>
+				<ul class="dropdown-menu">
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-3 dd2">
+		<div><span>Color:</span>
+			<span class="round_col"><img alt="Click" src="images/coloricon/all.png"/></span>
+			<span class="round_col"><img alt="Click" src="images/coloricon/oak.png"/></span>
+            <span class="round_col"><img alt="Click" src="images/coloricon/white_stained_oak_effect.png"/></span>
+		</div>
+		</div>
+		<div class="col-md-3 dd3"><a>Clear Filter</a></div>
+		</div>
+		<br></br>
+		
+		<div class="row">
+            
+<div class="col-md-12 col-md-offset-1">
+<div class="carousel slide" data-ride="carousel" data-type="multi" data-interval=false id="myCarousel">
+  <div class="carousel-inner">
+    <div class="item active">
+      <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/60x20x38 cm.jpg" ></a></div>
+    </div>
+    <div class="item">
+      <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/black brwon.jpg" ></a></div>
+    </div>
+    <div class="item">
+      <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/FR18.jpg" ></a></div>
+    </div>
+    <div class="item">
+      <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/white.jpg" ></a></div>
+    </div>
+    <div class="item">
+      <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/FR18.jpg" ></a></div>
+    </div>
+    <div class="item">
+      <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/FR18.jpg" ></a></div>
+    </div>
+    <div class="item">
+      <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/FR18.jpg" ></a></div>
+    </div>
+    <div class="item">
+      <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/FR18.jpg" ></a></div>
+    </div>
+  </div>
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+</div>
+</div>
+        </div>
+		
+		
+		
+		</div>
+		</div>
+		<!--tab3-->
+        <div class="tab-pane" id="tab3">
+		
+		<div class="tab-pane" id="tab2">
+		<div class="container width_pop">
+		<div class="row">
+		<div class="col-md-2">
+			<div class="dropdown">
+			<button class="btn btn-primary dropdown-toggle btn-sm" type="button" data-toggle="dropdown">Width
+			<span class="caret"></span></button>
+				<ul class="dropdown-menu">
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-2 dd">
+		<div class="dropdown">
+			<button class="btn btn-primary dropdown-toggle btn-sm" type="button" data-toggle="dropdown">Height
+			<span class="caret"></span></button>
+				<ul class="dropdown-menu">
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-2 dd1">
+		<div class="dropdown">
+			<button class="btn btn-primary dropdown-toggle btn-sm" type="button" data-toggle="dropdown">Depth
+			<span class="caret"></span></button>
+				<ul class="dropdown-menu">
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-3 dd2">
+		<div><span>Color:</span>
+			<span class="round_col"><img alt="Click" src="images/coloricon/all.png"/></span>
+			<span class="round_col"><img alt="Click" src="images/coloricon/oak.png"/></span>
+            <span class="round_col"><img alt="Click" src="images/coloricon/white_stained_oak_effect.png"/></span>
+		</div>
+		</div>
+		<div class="col-md-3 dd3"><a>Clear Filter</a></div>
+		</div>
+		<br></br>
+		
+		<div class="row">
+            
+<div class="col-md-12 col-md-offset-1">
+<div class="carousel slide" data-ride="carousel" data-type="multi" data-interval=false id="myCarousel">
+  <div class="carousel-inner">
+    <div class="item active">
+      <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/60x20x38 cm.jpg" ></a></div>
+    </div>
+    <div class="item">
+      <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/black brwon.jpg" ></a></div>
+    </div>
+    <div class="item">
+      <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/FR18.jpg" ></a></div>
+    </div>
+    <div class="item">
+      <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/white.jpg" ></a></div>
+    </div>
+    <div class="item">
+      <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/FR18.jpg" ></a></div>
+    </div>
+    <div class="item">
+      <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/FR18.jpg" ></a></div>
+    </div>
+    <div class="item">
+      <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/FR18.jpg" ></a></div>
+    </div>
+    <div class="item">
+      <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/FR18.jpg" ></a></div>
+    </div>
+  </div>
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+</div>
+</div>
+        </div>
+		
+		
+		
+		</div>
+		</div>
+		</div>
+		<!--tab4-->
+		<div class="tab-pane" id="tab4">
+		<div class="tab-pane" id="tab2">
+		<div class="container width_pop">
+		<div class="row">
+		<div class="col-md-2">
+			<div class="dropdown">
+			<button class="btn btn-primary dropdown-toggle btn-sm" type="button" data-toggle="dropdown">Width
+			<span class="caret"></span></button>
+				<ul class="dropdown-menu">
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-2 dd">
+		<div class="dropdown">
+			<button class="btn btn-primary dropdown-toggle btn-sm" type="button" data-toggle="dropdown">Height
+			<span class="caret"></span></button>
+				<ul class="dropdown-menu">
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-2 dd1">
+		<div class="dropdown">
+			<button class="btn btn-primary dropdown-toggle btn-sm" type="button" data-toggle="dropdown">Depth
+			<span class="caret"></span></button>
+				<ul class="dropdown-menu">
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-3 dd2">
+		<div><span>Color:</span>
+			<span class="round_col"><img alt="Click" src="images/coloricon/all.png"/></span>
+			<span class="round_col"><img alt="Click" src="images/coloricon/oak.png"/></span>
+            <span class="round_col"><img alt="Click" src="images/coloricon/white_stained_oak_effect.png"/></span>
+		</div>
+		</div>
+		<div class="col-md-3 dd3"><a>Clear Filter</a></div>
+		</div>
+		<br></br>
+		
+		<div class="row">
+            
+<div class="col-md-12 col-md-offset-1">
+<div class="carousel slide" data-ride="carousel" data-type="multi" data-interval=false id="myCarousel">
+  <div class="carousel-inner">
+    <div class="item active">
+      <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/60x20x38 cm.jpg" ></a></div>
+    </div>
+    <div class="item">
+      <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/black brwon.jpg" ></a></div>
+    </div>
+    <div class="item">
+      <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/FR18.jpg" ></a></div>
+    </div>
+    <div class="item">
+      <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/white.jpg" ></a></div>
+    </div>
+    <div class="item">
+      <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/FR18.jpg" ></a></div>
+    </div>
+    <div class="item">
+      <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/FR18.jpg" ></a></div>
+    </div>
+    <div class="item">
+      <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/FR18.jpg" ></a></div>
+    </div>
+    <div class="item">
+      <div class="col-md-2 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="images/thumbnail/FR18.jpg" ></a></div>
+    </div>
+  </div>
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+</div>
+</div>
+        </div>
+		
+		
+		
+		</div>
+		</div>
+		</div>
+    </div>
+</div>
+</div>
+            </div>
+			<script>
+			$("#btnPopover").popover({
+    html: true,
+    trigger: 'click',
+    
+    placement: "left",
+    content: $('#popoverContent').remove().html()
+});
+			</script>
+			<!-- Total Area start-->
+            <div class="col-md-3 hidden-xs">
+                <table class="table">
+        
+        <tbody>
+            <tr>
+                <td><img src="images/thumbnail/60x20x38 cm.jpg" style="height:50px;width:50px;"></td>
+                <td><b>BestA frame white</b><br>60x20x38 cm<br>Qty: 1</td>
+                <td><b>$30.00</b></td>
+               
+            </tr>
+            <tr>
+                <td><img src="images/thumbnail/60x20x38 cm.jpg" style="height:50px;width:50px;"></td>
+                <td><b>BestA frame white</b><br>60x20x38 cm<br>Qty: 1</td>
+                <td><b>$30.00</b></td>
+                
+            </tr>
+           
+        </tbody>
+    </table>
+	
+	<button type="button" class="btn btn-primary btn-lg btn-block">Continue</button>
+            </div>
+			<!-- Total Area end-->
+        </div>
+        
+       
+    </div>
+</body>
+</html>                                		

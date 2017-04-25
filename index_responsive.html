@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Besta</title>
+      <link href="css/bootstrap.css" rel="stylesheet" />
+      <link rel="stylesheet" href="css/swiper.min.css">
+      <link href="css/besta.css" rel="stylesheet" />
+   </head>
+   <body>
+
+      <script type="text/template" class="swiper">
+
+          <%
+            // repeat items 
+            _.each(rc.data, function(v,key,arr){
+          %>	  
+		  
+            <div class="swiper-slide">
+              <a href="#" class="add-item"  model-name= "<%= v.name %>" model-url= "<%= v.model %>" model-type= "<%= v.type %>">
+                <img src="<%= v.image %>" alt="" class="img-responsive">
+                <div style="font-size: 8px;color: #222;font-weight: 600;"><%= v.name %></div>
+              </a>
+            </div>
+
+          <%
+            });
+          %>
+
+      </script>
+
+      <div class="container-fluid main-wrapper">
+		<div class="container-fluid scroll-wrapper" style="padding: 0;">
+         <!-- Navigation -->
+         
+           <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div style="max-width: 1060px;margin: auto;">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="col-xs-7 col-sm-3">
+                <div class="navbar-header">
+                   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" style="float:left;">
+                   <span class="sr-only">Toggle navigation</span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                   </button>
+                   <a class="navbar-brand" href="#">
+                   <img src="images/logo.png" class="img-responsive">
+                   </a>
+                </div>
+              </div>
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="hidden-xs col-sm-7" style="text-align:center;">
+                <div id="bs-example-navbar-collapse-1" style="display: inline-block;">
+                   <ul class="nav navbar-nav">
+                      <li>
+                         <a href="#" class="active" id="new">New</a>
+                      </li>
+                      <li>
+                         <a href="#" id="loadFile">Open</a>
+                      </li>
+                      <li>
+                         <a href="#" id="saveFile">Save</a>
+                      </li>
+                      <li>
+                         <a href="#">Share</a>
+                      </li>
+                      <li>
+                         <a href="#">Help</a>
+                      </li>
+                      <li>
+                         <a href="#">Print</a>
+                      </li>
+                   </ul>
+                </div>
+              </div>
+              <div class="col-xs-5 col-sm-2">
+                <div class="pull-right mR10">
+                  <a href="#" class="Login">LOGIN</a>
+                </div>
+              </div>
+              <!-- /.navbar-collapse -->
+              </div>
+           </nav>
+          <div class="main-row mT55"  style="/*display: table;*/width: 100%;padding: 0;">
+            <!-- Left Column -->
+            <div class="col-xs-12 col-sm-9 main" style="padding: 0 10px;">
+               <!-- 3D Viewer -->
+               <div id="viewer" style="display: block;border: 1px solid gainsboro;position: relative;">
+                  <!-- Popover-->
+                  <div class="pull-right">
+                     <div class="tabbable" id="popoverContent2">
+                        <div style="display:inline-block;width: 100%;margin-bottom: 5px;">
+                           <div class="input-group pull-left width35" style="position:relative;">
+                              <input id="email" type="text" class="form-control" name="email" placeholder="Search or article no">
+                              <span class="input-group-addon" style="background: transparent;border: none;position: absolute;right: 5px;top: -1px;"><i class="glyphicon glyphicon-search"></i></span>   
+                           </div>
+                           <div class="pull-right">Add Product << <b> Storage Frames </b></div>
+                        </div>
+                        <ul class="nav nav-tabs">
+                           <li class="active"><a href=".tab1" data-toggle="tab" data-item="storage frame"><img src="images/thumbnail_matera_dresser_5.png" width="20px" height="20px"> Storage Frames</a></li>
+                           <li class="tab"><a href=".tab1" data-toggle="tab" data-item="tv bench"><img src="images/thumbnail_clapboard-white-60-media-console-1.jpg" width="20px" height="20px"> TV Benches </a></li>
+                           <li class="tab"><a href=".tab1" data-toggle="tab" data-item="propping"><img src="images/thumbnail_Blu-Dot-Shale-Bedside-Table.jpg" width="20px" height="20px"> Propping </a></li>
+                           <li class="tab"><a href=".tab1" data-toggle="tab" data-item="placeholder"><img src="images/thumbnail_teca-storage-trunk.jpg" width="20px" height="20px"> Place Holder </a></li>
+                        </ul>
+                        <div class="tab-content" style="padding: 10px; ">
+                           <div class="tab-pane active tab1" >
+                              <div class="DD">
+                                 <div class="dropdown dInline">
+                                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Width
+                                    <span class="caret"></span></button>
+                                    <ul class="dropdown-menu ">
+                                       <li><a href="#">option 1</a></li>
+                                       <li><a href="#">option 2</a></li>
+                                       <li><a href="#">option 3</a></li>
+                                    </ul>
+                                 </div>
+                                 <div class="dropdown dInline">
+                                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Height
+                                    <span class="caret"></span></button>
+                                    <ul class="dropdown-menu">
+                                       <li><a href="#">option 1</a></li>
+                                       <li><a href="#">option 2</a></li>
+                                       <li><a href="#">option 3</a></li>
+                                    </ul>
+                                 </div>
+                                 <div class="dropdown dInline">
+                                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Depth
+                                    <span class="caret"></span></button>
+                                    <ul class="dropdown-menu">
+                                       <li><a href="#">option 1</a></li>
+                                       <li><a href="#">option 2</a></li>
+                                       <li><a href="#">option 3</a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                              <!--div class="aCenter">
+                                 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                 <img src="images/60x20x38cm.jpg" >
+                                 <img src="images/black brwon.jpg" >
+                                 <img src="images/FR18.jpg">
+                                 <img src="images/Grey Stained.jpg">
+                                 <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                              </div-->
+                              <div style="position:relative;padding:0 50px;">
+                                <div class="swiper-container" id="swiper">
+                                    <div class="swiper-wrapper"></div>
+                                </div>
+                                <!-- Add Arrows -->
+                                <div class="swiper-button-next">
+                                  <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+                                </div>
+                                <div class="swiper-button-prev">
+                                  <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+                                </div>
+                              </div>
+                           </div>
+                           <div class="tab-pane tab2">Tab Content 2</div>
+                           <div class="tab-pane tab3" >Tab Content 3</div>
+                        </div>
+                     </div>
+                     <a class="btn" id="btnPopover" href="#"><span class="glyphicon glyphicon-plus plusBG" style="margin:3px 0 0 0"></span></a>
+                     <div id="main-controls">
+                        <!-- <a href="#" class="btn btn-default btn-sm" id="new">
+                        Start from Scratch
+                        </a>
+                        <a href="#" class="btn btn-default btn-sm" id="saveFile">
+                        Save Plan
+                        </a>
+                        <a class="btn btn-sm btn-default btn-file">
+                        <input type="file" class="hidden-input" id="loadFile" />
+                        Load Plan
+                        </a> -->
+                     </div>
+                     <div id="camera-controls">
+                        <a href="#" class="btn btn-default bottom" id="zoom-out">
+                        <span class="glyphicon glyphicon-zoom-out"></span>
+                        </a>
+                        <a href="#" class="btn btn-default bottom" id="reset-view">
+                        <span class="glyphicon glyphicon glyphicon-home"></span>
+                        </a>
+                        <a href="#" class="btn btn-default bottom" id="zoom-in">
+                        <span class="glyphicon glyphicon-zoom-in"></span>
+                        </a>
+                        <span>&nbsp;</span>
+                        <a class="btn btn-default bottom" href="#" id="move-left" >
+                        <span class="glyphicon glyphicon-arrow-left"></span>
+                        </a>
+                        <span class="btn-group-vertical">
+                        <a class="btn btn-default" href="#" id="move-up">
+                        <span class="glyphicon glyphicon-arrow-up"></span>
+                        </a>
+                        <a class="btn btn-default" href="#" id="move-down">
+                        <span class="glyphicon glyphicon-arrow-down"></span>
+                        </a>
+                        </span>
+                        <a class="btn btn-default bottom" href="#" id="move-right" >
+                        <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                     </div>
+                     <div id="loading-modal">
+                        <h1>Loading...</h1>
+                     </div>
+                  </div>
+                  <!-- 2D Floorplanner -->
+                  <div id="floorplanner">
+                     <canvas id="floorplanner-canvas"></canvas>
+                     <div id="floorplanner-controls">
+                        <button id="move" class="btn btn-sm btn-default">
+                        <span class="glyphicon glyphicon-move"></span>
+                        Move Walls
+                        </button>
+                        <button id="draw" class="btn btn-sm btn-default">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                        Draw Walls
+                        </button>
+                        <button id="delete" class="btn btn-sm btn-default">
+                        <span class="glyphicon glyphicon-remove"></span>
+                        Delete Walls
+                        </button>
+                        <span class="pull-right">
+                        <button class="btn btn-primary btn-sm" id="update-floorplan">Done &raquo;</button>
+                        </span>
+                     </div>
+                     <div id="draw-walls-hint">
+                        Press the "Esc" key to stop drawing walls
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- End Right Column -->
+            <!-- Right Column -->
+            <div class="col-xs-12 col-sm-3 sidebar">
+              <div class="row" style="height: 30px;background: gainsboro;padding: 0;"></div>
+
+              <ul id="cart-items">
+                <li>
+                  <div class="col-sm-2" style="padding:0;"><img src="images/60x20x38cm.jpg" width="55px"></div>
+                  <div class="col-sm-6">
+                    <div style="font-size:11px;font-weight:600;">BestA frame white</div>
+                    <div style="font-size:10px;color:gray;">60x20x38 cm</div>
+                    <div style="font-size:10px;">Qty: 1</div>
+                  </div>
+                  <div class="col-sm-3"><div  style="font-size:11px;font-weight:600;">$30.00</div></div>
+                </li>
+                <li>
+                  <div class="col-sm-2" style="padding:0;"><img src="images/60x20x38cm.jpg" width="55px"></div>
+                  <div class="col-sm-6">
+                    <div style="font-size:11px;font-weight:600;">BestA frame white</div>
+                    <div style="font-size:10px;color:gray;">60x20x38 cm</div>
+                    <div style="font-size:10px;">Qty: 1</div>
+                  </div>
+                  <div class="col-sm-3"><div  style="font-size:11px;font-weight:600;">$30.00</div></div>
+                </li>
+
+              </ul>
+              <!--
+               <p><b>Products Added</b> <span><input type="text" size="1"></span></p>
+               <table class="table-fill">
+                  <thead>
+                     <tr>
+                        <th class="text-left">Qty</th>
+                        <th class="text-left">Item</th>
+                        <th class="text-left">Price</th>
+                     </tr>
+                  </thead>
+                  <tbody class="table-hover">
+                     <tr>
+                        <td class="text-left">1</td>
+                        <td class="text-left"> <img src="images/60x20x38cm.jpg" width="55px"></td>
+                        <td class="text-left">10</td>
+                     </tr>
+                     <tr>
+                        <td class="text-left">2</td>
+                        <td class="text-left"> <img src="images/black brwon.jpg" width="55px"></td>
+                        <td class="text-left">10</td>
+                     </tr>
+                     <tr>
+                        <td class="text-left">3</td>
+                        <td class="text-left"> <img src="images/FR18.jpg" width="55px"></td>
+                        <td class="text-left">10</td>
+                     </tr>
+                  </tbody>
+               </table>
+
+               -->
+               <!--div class="pull-right">
+                  <div class="totalBG"><b>Total: 30</b></div>
+                  <button name="color" type="button" class="btn btn-success" value="btn-success">Continue <span class="glyphicon glyphicon-triangle-right"></button>
+               </div-->
+
+               <div style="padding:0 10px;">
+                <button name="color" type="button" class="btn" value="btn-success" style="
+                    background: #0051ba;
+                    color: #fff;
+                    width: 100%;
+                    padding: 10px;
+                    border-radius: 0;
+                ">Continue </button>
+               </div>
+
+
+
+            </div>
+         </div>
+		 </div>
+      </div>
+      <script src="js/three.min.js"></script>
+      <script src="js/compiled.js"></script>
+      <script src="js/jquery.js"></script>
+      <script src="js/bootstrap.js"></script>
+      <script src="js/items.js"></script>
+      <script src="js/main.js"></script>
+      <script src="js/swiper.min.js"></script>
+      <script src="js/underscore-min.js"></script>
+      <script>
+
+        var organizedItems = {};
+        var swiper;
+        var defaultItem = $("#popoverContent2 .nav-tabs li.active").find("a");
+
+        $.each(items, function(k,v){
+            if(v.modeltype){
+                if(!organizedItems[v.modeltype]){
+                  organizedItems[v.modeltype] = [];
+                }
+                organizedItems[v.modeltype].push(v);
+            }
+        });
+
+        function initSwiper(){
+          if(swiper !== undefined) swiper.destroy(true, true);
+          swiper = new Swiper('.swiper-container', {
+              //pagination: '.swiper-pagination',
+              slidesPerView: 6,
+              slidesPerGroup: 6,
+              initialSlide: 0,
+              //paginationClickable: true,
+              spaceBetween: 15,
+              nextButton: '.swiper-button-next',
+              prevButton: '.swiper-button-prev'
+          });
+		
+        }
+		
+		
+
+        function createTemplate(tpl, renderWrapper, data){
+            _.templateSettings.variable = "rc";
+            var template = _.template(
+                $( tpl ).html()
+            );
+            $( renderWrapper ).html(
+                template({"data":data})
+            );
+        }
+
+        createTemplate("script.swiper", "#swiper .swiper-wrapper", organizedItems[defaultItem.data("item")]);
+
+        $('a[data-toggle="tab"]').click(function(){
+          var modeltype = $(this).data('item');
+          createTemplate("script.swiper", "#swiper .swiper-wrapper", organizedItems[modeltype]);
+          initSwiper();
+        });
+
+        $("#btnPopover").on("click", function(){
+          $("#popoverContent2").toggle();
+          initSwiper();
+        });
+
+      </script>
+    <script>
+
+    </script>
+   </body>
+</html>

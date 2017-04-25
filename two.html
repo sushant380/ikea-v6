@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Planner2D</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<style type="text/css">
+    .bs-example{
+    	margin: 20px;
+    }
+	.navbar-default {
+  background-color: #0759a3;
+  background-image: none;
+  background-repeat: no-repeat;
+ }
+ .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+color: cyan;  /*Sets the text hover color on navbar*/
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active >   
+ a:hover, .navbar-default .navbar-nav > .active > a:focus {
+color: white; /*BACKGROUND color for active*/
+background-color: #094275;
+background-image: none;
+  background-repeat: no-repeat;
+}
+
+  .navbar-default {
+    background-color: #0759a3;
+    }
+
+  .dropdown-menu > li > a:hover,
+   .dropdown-menu > li > a:focus {
+    color: #262626;
+   text-decoration: none;
+  background-color: #094275;  /*change color of links in drop down here*/
+  background-image: none;
+  background-repeat: no-repeat;
+   }
+
+ .nav > li > a:hover,
+ .nav > li > a:focus {
+    text-decoration: none;
+    background-color: silver; /*Change rollover cell color here*/
+	
+  }
+
+
+  .navbar-default .navbar-nav > li > a {
+   color: white;
+	font-size: 17px;
+    font-weight: bold;   /*Change active text color here*/
+    }
+	.main{
+	height:500px;
+	border:1px solid black;
+	border-radius:10px;
+	background-color: #b9cee8;
+	
+	
+	}
+	.main2{
+	height:180px;
+	border:1px solid black;
+	border-radius:10px;
+	background-color: #b9cee8;
+	}
+	.mar{margin:15px;}
+	.btn1{margin-left:20px;}
+	.trigger{margin-top:50px;margin-right:-50px;}
+	.popover-content {
+  height: 200px;
+  overflow-y: scroll;
+ }
+		#popoverExampleTwo{
+		margin-top:200px;
+		margin-right:-10px;}
+		
+		.img_div{
+		height:70px;
+		width:70px;
+		border:1px solid red;
+		margin:10px;
+		
+		}
+		
+		.round_col_gr{
+		 width: 20px; height: 20px; display: inline-block; background: #5cb85c; top: 30px; left: 50%; border-radius: 50%;
+		}
+		.round_col_rd{
+		 width: 20px; height: 20px; display: inline-block; background: #d81717; top: 30px; left: 50%; border-radius: 50%;
+		}
+		.round_col_br{
+		 width: 20px; height: 20px; display: inline-block; background: #662b2b; top: 30px; left: 50%; border-radius: 50%;
+		}
+		.total{margin-top:10%;}
+		.badge-notify{
+   background:green;
+   position:relative;
+   top: -35px;
+   left: -20px;
+  }
+		.bs-wizard {margin-top: 50px;}
+
+/*Form Wizard*/
+.bs-wizard {border-bottom: solid 1px #e0e0e0; padding: 0 0 0 0;}
+.bs-wizard > .bs-wizard-step {padding: 0; position: relative;}
+.bs-wizard > .bs-wizard-step + .bs-wizard-step {}
+.bs-wizard > .bs-wizard-step .bs-wizard-stepnum {color: #595959; font-size: 12px; margin-bottom: 2px;}
+.bs-wizard > .bs-wizard-step .bs-wizard-info {color: #999; font-size: 14px;}
+.bs-wizard > .bs-wizard-step > .bs-wizard-dot {position: absolute; width: 20px; height: 20px; display: block; background: #5cb85c; top: 30px; left: 50%; margin-top: -15px; margin-left: -15px; border-radius: 50%;} 
+.bs-wizard > .bs-wizard-step > .bs-wizard-dot:after {content: ' '; width: 10px; height: 10px; background: #f2dede; border-radius: 50px; position: absolute; top: 5px; left: 5px; } 
+.bs-wizard > .bs-wizard-step > .progress {position: relative; border-radius: 0px; height: 3px; box-shadow: none; margin: 8px 0;}
+.bs-wizard > .bs-wizard-step > .progress > .progress-bar {width:0px; box-shadow: none; background: #4496ed;}
+.bs-wizard > .bs-wizard-step.complete > .progress > .progress-bar {width:100%;}
+.bs-wizard > .bs-wizard-step.active > .progress > .progress-bar {width:50%;}
+.bs-wizard > .bs-wizard-step:first-child.active > .progress > .progress-bar {width:0%;}
+.bs-wizard > .bs-wizard-step:last-child.active > .progress > .progress-bar {width: 100%;}
+.bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot {background-color: #f5f5f5;}
+.bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot:after {opacity: 0;}
+.bs-wizard > .bs-wizard-step:first-child  > .progress {left: 50%; width: 50%;}
+.bs-wizard > .bs-wizard-step:last-child  > .progress {width: 50%;}
+.bs-wizard > .bs-wizard-step.disabled a.bs-wizard-dot{ pointer-events: none; }
+/*END Form Wizard*/
+
+@media only screen and (max-width: 900px) {
+   .navbar-default {
+    background-color: transparent;
+    }
+	.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    color: #0e687d;
+    background-color: transparent;
+    background-image: none;
+    background-repeat: no-repeat;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #2a2da9;
+    font-size: 15px;
+    font-weight: bold;
+}
+.navbar-header{
+background-color:#0759a3;}
+}
+</style>
+
+<script>
+$(function(){
+    
+   
+    $("[data-toggle=popover]").popover();
+
+    
+    $("#popoverExampleTwo").popover({
+	placement : 'left',
+        html : true, 
+        content: function() {
+          return $('#popoverExampleTwoHiddenContent').html();
+        },
+        title: function() {
+          return $('#popoverExampleTwoHiddenTitle').html();
+        }
+    });
+
+});
+
+function toggleFullScreen(elem) {
+  if ((document.fullScreenElement !== undefined && document.fullScreenElement === null) || (document.msFullscreenElement !== undefined && document.msFullscreenElement === null) || (document.mozFullScreen !== undefined && !document.mozFullScreen) || (document.webkitIsFullScreen !== undefined && !document.webkitIsFullScreen)) {
+    if (elem.requestFullScreen) {
+      elem.requestFullScreen();
+    } else if (elem.mozRequestFullScreen) {
+      elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullScreen) {
+      elem.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+    } else if (elem.msRequestFullscreen) {
+      elem.msRequestFullscreen();
+    }
+  } else {
+    if (document.cancelFullScreen) {
+      document.cancelFullScreen();
+    } else if (document.mozCancelFullScreen) {
+      document.mozCancelFullScreen();
+    } else if (document.webkitCancelFullScreen) {
+      document.webkitCancelFullScreen();
+    } else if (document.msExitFullscreen) {
+      document.msExitFullscreen();
+    }
+  }
+}
+
+
+</script>
+</head> 
+<body>
+<div >
+    <nav role="navigation" class="navbar navbar-default navbar-fixed-top container">
+       
+        <div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand"><img style="max-width:155px;max-height:100px; margin-top: -18px;"
+             src="logo.png"></a>
+        </div>
+       
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">New</a></li>
+                <li><a href="#">Open</a></li>
+				<li><a href="#">Save</a></li>
+				<li><a href="#">Share</a></li>
+				<li><a href="#">Help</a></li>
+				<li><a href="#">Print</a></li>
+			</ul>
+            
+            <ul class="nav navbar-nav navbar-right">
+                
+				<li class="hidden-sm hidden-xs"><button class="btn btn-default btn-lg"><span class="glyphicon glyphicon-user"></span></button></li>
+				<li><a href="#">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<div class="container">
+<!--Shopping detail-->
+ <div class="row bs-wizard" style="border-bottom:0;">
+                
+                <div class="col-xs-3 bs-wizard-step complete">
+                  <div class="text-center bs-wizard-stepnum">Step 1</div>
+                  <div class="progress"><div class="progress-bar"></div></div>
+                  <a href="#" class="bs-wizard-dot"></a>
+                 
+                </div>
+                
+                <div class="col-xs-3 bs-wizard-step active"><!-- complete -->
+                  <div class="text-center bs-wizard-stepnum">Step 2</div>
+                  <div class="progress"><div class="progress-bar"></div></div>
+                  <a href="#" class="bs-wizard-dot"></a>
+                  
+                </div>
+                
+                <div class="col-xs-3 bs-wizard-step disabled"><!-- complete -->
+                  <div class="text-center bs-wizard-stepnum">Step 3</div>
+                  <div class="progress"><div class="progress-bar"></div></div>
+                  <a href="#" class="bs-wizard-dot"></a>
+                
+                </div>
+                
+                <div class="col-xs-3 bs-wizard-step disabled"><!-- active -->
+                  <div class="text-center bs-wizard-stepnum">Step 4</div>
+                  <div class="progress"><div class="progress-bar"></div></div>
+                  <a href="#" class="bs-wizard-dot"></a>
+                 
+                </div>
+            </div>
+<!--shopping end-->
+<!--image area-->
+ <div class="row">
+    <div class="col-md-12 main">
+	<div class="btn-toolbar">
+		<button class="btn btn-default btn-lg btn1"><span class="glyphicon glyphicon-pencil"></span></button>
+        <button class="btn btn-default btn-lg btn1"><span class="glyphicon glyphicon-share-alt"></span></button>
+        <button class="btn btn-default btn-lg btn1"><span class="glyphicon glyphicon-screenshot"></span></button>
+        <button class="btn btn-default btn-lg btn1"><span class="glyphicon glyphicon-zoom-in"></span></button>
+		<button class="btn btn-default btn-lg btn1"><span class="glyphicon glyphicon-zoom-out"></span></button>
+		
+		<button class="btn btn-default btn-lg btn1" onclick="toggleFullScreen(document.body)"><span class="glyphicon glyphicon-fullscreen "></span> </button>
+		
+		<a href="#" id="popoverExampleTwo" class="trigger btn btn-default btn-lg pull-right "><span class="glyphicon glyphicon-plus-sign "></span></a>
+           
+					
+         
+          <div id="popoverExampleTwoHiddenContent" style="display: none">
+             <div class="panel-group" id="accordion">
+           
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    
+                     <h4 class="panel-title">
+                        
+                        <a data-toggle="collapse" data-parent="#accordion" href="#accordionOne">
+                            Storage Frames
+                        </a>
+                    </h4>
+
+                </div>
+               
+                <div id="accordionOne" class="panel-collapse collapse">
+                    <div class="panel-body">
+					<div>Color:
+					<span class="round_col_gr"></span>
+					<span class="round_col_rd"></span>
+					<span class="round_col_br"></span></div>
+					<div class="col-md-6 col-sm-12 img_div"></div>
+					<div class="col-md-6 col-sm-12 img_div"></div>
+					<div class="col-md-6 col-sm-12 img_div"></div>
+					<div class="col-md-6 col-sm-12 img_div"></div>
+					</div>
+                </div>
+            </div>
+            <div class="panel panel-primary">
+              
+                <div class="panel-heading">
+                     <h4 class="panel-title">
+                       
+                        <a data-toggle="collapse" data-parent="#accordion" href="#accordionTwo">
+                            TV Benches
+                        </a>
+                    </h4>
+
+                </div>
+                
+                <div id="accordionTwo" class="panel-collapse collapse">
+                    <div class="panel-body">
+					<div>Color:
+					<span class="round_col_gr"></span>
+					<span class="round_col_rd"></span>
+					<span class="round_col_br"></span></div>
+					<div class="col-md-6 col-sm-12 img_div"></div>
+					<div class="col-md-6 col-sm-12 img_div"></div>
+					<div class="col-md-6 col-sm-12 img_div"></div>
+					<div class="col-md-6 col-sm-12 img_div"></div>
+					</div>
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                
+                <div class="panel-heading">
+                     <h4 class="panel-title">
+                       
+                        <a data-toggle="collapse" data-parent="#accordion" href="#accordionThree">
+                            Propping
+                        </a>
+                    </h4>
+
+                </div>
+                <div id="accordionThree" class="panel-collapse collapse">
+                    
+                    <div class="panel-body">
+					<div>Color:
+					<span class="round_col_gr"></span>
+					<span class="round_col_rd"></span>
+					<span class="round_col_br"></span></div>
+					<div class="col-md-6 col-sm-12 img_div"></div>
+					<div class="col-md-6 col-sm-12 img_div"></div>
+					<div class="col-md-6 col-sm-12 img_div"></div>
+					<div class="col-md-6 col-sm-12 img_div"></div>
+					</div>
+                </div>
+            </div>
+			<div class="panel panel-primary">
+                
+                <div class="panel-heading">
+                     <h4 class="panel-title">
+                        
+                        <a data-toggle="collapse" data-parent="#accordion" href="#accordionFour">
+                            Place Holder
+                        </a>
+                    </h4>
+
+                </div>
+                <div id="accordionFour" class="panel-collapse collapse">
+                   
+                    <div class="panel-body">
+					<div>Color:
+					<span class="round_col_gr"></span>
+					<span class="round_col_rd"></span>
+					<span class="round_col_br"></span></div>
+					<div class="col-md-6 col-sm-12 img_div"></div>
+					<div class="col-md-6 col-sm-12 img_div"></div>
+					<div class="col-md-6 col-sm-12 img_div"></div>
+					<div class="col-md-6 col-sm-12 img_div"></div>
+					</div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $("[data-toggle=popover]").popover({
+                html: true,
+                content: function() {
+                    var clone = $('#popover-content').clone(true).html();
+                    return clone;
+                }
+            });
+        </script>
+    </div>
+    
+          
+          <div id="popoverExampleTwoHiddenTitle" style="display: none">
+            <div class="input-group">
+								<input id="email" type="text" class="form-control" name="email" placeholder="Search by product or artical no">
+								<span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>   
+							</div>
+          </div>  
+            
+       
+      
+    </div>
+
+    </div>
+	</div>
+<!--second row-->
+<div class="row">
+<div class="col-md-12 main2">
+<div class="row">
+<div class="col-md-6"></div>
+<div class="col-md-6">
+<div class=" total pull-right">
+<button class="btn btn-default btn-lg" style="font-size:30px;">
+   <b>Total &nbsp;&nbsp;&nbsp;</b><b>$</b>00.00
+  </button>
+  <span class="badge badge-notify">0</span>
+  </div>
+</div>
+</div>
+
+</div>
+</div>	
+	</div>
+
+
+</div>
+</body>
+</html>                                		
