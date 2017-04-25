@@ -3,9 +3,9 @@
   var items = [
   {
       "name" : "sofa",
-      "image" : "models/thumbnails/Grey Stained.JPG",
+      "image" : "models/thumbnails/sofa.JPG",
       "model" : "models/js/sofa.js",
-      "model_img":"models/sofa/sofa.jpg",
+      "model_img":"models/sofa/sofa.png",
       "type" : "1",
       "itm":"custom",
 	  "colour": "grey stained walnut effect",
@@ -18,7 +18,7 @@
     },
     {
       "name" : "sink",
-      "image" : "models/thumbnails/Grey Stained.JPG",
+      "image" : "models/thumbnails/sink.JPG",
       "model" : "models/js/sink.js",
       "model_img":"models/sink/sink.png",
       "type" : "1",
@@ -33,7 +33,7 @@
     },
     {
       "name" : "oven",
-      "image" : "models/thumbnails/Grey Stained.JPG",
+      "image" : "models/thumbnails/oven.JPG",
       "model" : "models/js/sink.js",
       "model_img":"images/oven.png",
       "type" : "1",
